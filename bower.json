@@ -1,0 +1,21 @@
+{
+  "name": "friendfinder",
+  "description": "\"homework13\"",
+  "main": "app.js",
+  "authors": [
+    "Kylie"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ABitOfKylie/FriendFinder",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.6.3"
+  }
+}

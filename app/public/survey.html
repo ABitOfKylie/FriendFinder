@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Survey</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar navbar-bright navbar-fixed-top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">Home</a>
+                <!-- file:///Users/MacDream/Desktop/Bootcamp/Week13/FriendFinder/public/index.html -->
+            </div>
+        </div>
+    </header>
+    <div id="masthead">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1>Friend Finder Survey
+          <p class="lead"></p>
+        </h1>
+                </div>
+                <div class="col-md-5">
+                    <div class="well well-lg">
+                        <img src="http://static.tumblr.com/waf6i9y/c9Dm3o026/sideba.gif" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /cont -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="top-spacer"> </div>
+                </div>
+            </div>
+        </div>
+        <!-- /cont -->
+    </div>
+    <!-- start of question section with own container. -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel">
+                    <div class="panel-body">
+                        <hr>
+                        <h3>About You</h3>
+                        <h4>Name (Required)</h4>
+                        <input type="text" name id="name" class="form-control" required>
+                        <h4>Link to Photo Image</h4>
+                        <input type="text" name id="name" class="form-control" required>
+                        <hr>
+                        <h3><strong>Question 1</strong></h3>
+                        <h4>You enjoy going to places that your friends choose</h4>
+                        <select data-placeholder class="chosen-select" id="Q1" style="display:none;">
+                            <option value></option>
+                            <option value="1">1 (Strongly Agree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Disagree)</option>
+                        </select>
+                        <div class="chose-container chose-container-single" style="width:140px" ; title id="Q1_chosen"> ==$0
+                            <a class="chosen-single chose-default"><span>Select an Option</span>
+              <div>
+                <b></b>
+              </div>
+            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of question section -->
+        <hr>
+        <!-- modal code add placeholders and fill from api results create js code 
+<div class="container">
+  <h2>Your Best Match</h2>
+  <!- Trigger the modal with a button   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+  <!- Modal 
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!- Modal content
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div
+
+        -->
+
+        <div class="container" id="footer">
+            <div class="row">
+                <div class="col col-sm-12">
+                    <h4>For more info:</h4>
+                    <div class="btn-group">
+                        <a href="./view.html">
+                            <button type="button" class="btn btn-primary btn-sm"><span class="glyphicons glyphicons-notes-2"></span> API Friends List</button>
+                        </a>
+                        <a href="./view.html">
+                            <button type="button" class="btn btn-primary btn-sm"><span class="glyphicons glyphicons-notes-2"></span> GitHub Repo</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <hr>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="pull-left"><span class="glyphicons glyphicons-notes-2"></span> Week 13 Homework</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Modal -->
+        <div id="resultsModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title"><strong>Best Match</strong></h2>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="matchName"></h2>
+                        <img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg"
+                            alt="" height="400" width="400">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+<!-- here is the short version w/o calc pulling info from the form: 
+$(".submit").on("click",function(){
+    var newUser = {
+        name:$("#name").val().trim(),
+        photo:$("#photo").val().trim(),
+        scores: [] - $("#photo").val().trim(),
+    }
+
+    var currentURL = window.location.origin;
+
+    $.post(currentURL + "api/friends", newUser,
+    function(data){
+        if(data == true){
+            console.log("this is where I want the modal to pop")
+        }
+        if (data == false){
+            console.log("ideally - alt modal would pop up")
+        }
+
+        clear the form after posting data
+        $("#name").val(""0
+        $("#name").val(""0);
+        $("#name").val(""0);    
+    });
+        return false;   important!
+
+
+}); -->
+        <!-- script references -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            "use strict";
+            // Capture the form inputs
+            $("#submit").on("click", function(){
+                // Form validation
+                function validateForm() {
+                    let isValid = true;
+                    $(".name-input").each(function() {
+                        if ( $(this).val() === "" )
+                            isValid = false;
+                    });
+                    $(".answer-input").each(function() {
+                        if( $(this).val() === "")
+                            isValid = false
+                    });
+                    return isValid;
+                }
+                // If all required fields are filled
+                if (validateForm()) {
+                    // Create an object for the user's data
+                    let userData = {
+                        name: $("#name").val(),
+                        photo: $("#photo").val(),
+                        scores: []
+                    }
+                    // loop through the questions and get responses and push to user object
+                    for ( let i = 1; i <= 10; i++ ) {
+                        let selected = document.querySelector(`input[name="question${i}"]:checked`).value;
+                        userData.scores.push(selected);
+                    }
+                    // Grab the URL of the website
+                    let currentURL = window.location.origin;
+                    // AJAX post the data to the friends API.
+                    $.post(currentURL + "/api/friends", userData, function(data){
+                        // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                        $("#matchName").text(data.name);
+                        $("#matchImg").attr("src", data.photo);
+                        // Show the modal with the best match
+                        $("#resultsModal").modal('toggle');
+                    });
+                }
+                else {
+                    alert("Please fill out all fields before submitting!");
+                }
+                return false;
+            });
+        </script>
+</body>
+
+</html>
